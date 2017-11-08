@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A21E86C1FB1D13500C59C5F /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E86B1FB1D13500C59C5F /* ModelController.swift */; };
 		4A21E86E1FB1D27500C59C5F /* MNISTModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E86D1FB1D27500C59C5F /* MNISTModelController.swift */; };
 		4A21E86F1FB1D27500C59C5F /* MNISTModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E86D1FB1D27500C59C5F /* MNISTModelController.swift */; };
 		4A21E8711FB1D28B00C59C5F /* MNISTCNNModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E8701FB1D28B00C59C5F /* MNISTCNNModel.mlmodel */; };
 		4A21E8721FB1D28B00C59C5F /* MNISTCNNModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E8701FB1D28B00C59C5F /* MNISTCNNModel.mlmodel */; };
-		4A21E8741FB1D2ED00C59C5F /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E8731FB1D2ED00C59C5F /* DrawingView.swift */; };
-		4A21E8751FB1D2ED00C59C5F /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E8731FB1D2ED00C59C5F /* DrawingView.swift */; };
+		4A21E8741FB1D2ED00C59C5F /* MNISTDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E8731FB1D2ED00C59C5F /* MNISTDrawingView.swift */; };
+		4A21E8751FB1D2ED00C59C5F /* MNISTDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E8731FB1D2ED00C59C5F /* MNISTDrawingView.swift */; };
 		4A21E87D1FB1D3BC00C59C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E87C1FB1D3BC00C59C5F /* AppDelegate.swift */; };
 		4A21E87F1FB1D3BC00C59C5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E87E1FB1D3BC00C59C5F /* ViewController.swift */; };
 		4A21E8821FB1D3BC00C59C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A21E8801FB1D3BC00C59C5F /* Main.storyboard */; };
@@ -22,6 +21,7 @@
 		4A21E8921FB1D3BD00C59C5F /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E8911FB1D3BD00C59C5F /* ExampleTests.swift */; };
 		4A21E89D1FB1D3BD00C59C5F /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21E89C1FB1D3BD00C59C5F /* ExampleUITests.swift */; };
 		4A21E8A91FB1D3DA00C59C5F /* MNISTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* MNISTKit.framework */; };
+		4AF3F65E1FB28490005EF230 /* UIImage+MNISTKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF3F65D1FB28490005EF230 /* UIImage+MNISTKit.swift */; };
 		52D6D9871BEFF229002C0205 /* MNISTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* MNISTKit.framework */; };
 		8933C78E1EB5B82C000D00A4 /* MNISTKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* MNISTKitTests.swift */; };
 		8933C78F1EB5B82C000D00A4 /* MNISTKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* MNISTKitTests.swift */; };
@@ -69,10 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A21E86B1FB1D13500C59C5F /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		4A21E86D1FB1D27500C59C5F /* MNISTModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNISTModelController.swift; sourceTree = "<group>"; };
 		4A21E8701FB1D28B00C59C5F /* MNISTCNNModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNISTCNNModel.mlmodel; sourceTree = "<group>"; };
-		4A21E8731FB1D2ED00C59C5F /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		4A21E8731FB1D2ED00C59C5F /* MNISTDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNISTDrawingView.swift; sourceTree = "<group>"; };
 		4A21E87A1FB1D3BC00C59C5F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A21E87C1FB1D3BC00C59C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A21E87E1FB1D3BC00C59C5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		4A21E8981FB1D3BD00C59C5F /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A21E89C1FB1D3BD00C59C5F /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		4A21E89E1FB1D3BD00C59C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AF3F65D1FB28490005EF230 /* UIImage+MNISTKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MNISTKit.swift"; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* MNISTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MNISTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* MNISTKit-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MNISTKit-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* MNISTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MNISTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +214,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4AF3F65A1FB276D8005EF230 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A21E8731FB1D2ED00C59C5F /* MNISTDrawingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AF3F65B1FB276E7005EF230 /* ModelControl */ = {
+			isa = PBXGroup;
+			children = (
+				4A21E86D1FB1D27500C59C5F /* MNISTModelController.swift */,
+			);
+			path = ModelControl;
+			sourceTree = "<group>";
+		};
+		4AF3F65C1FB276F1005EF230 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A21E8701FB1D28B00C59C5F /* MNISTCNNModel.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AF3F65F1FB2850C005EF230 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				4AF3F65D1FB28490005EF230 /* UIImage+MNISTKit.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
@@ -257,10 +289,10 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4A21E8731FB1D2ED00C59C5F /* DrawingView.swift */,
-				4A21E86D1FB1D27500C59C5F /* MNISTModelController.swift */,
-				4A21E8701FB1D28B00C59C5F /* MNISTCNNModel.mlmodel */,
-				4A21E86B1FB1D13500C59C5F /* ModelController.swift */,
+				4AF3F65F1FB2850C005EF230 /* extension */,
+				4AF3F65A1FB276D8005EF230 /* View */,
+				4AF3F65B1FB276E7005EF230 /* ModelControl */,
+				4AF3F65C1FB276F1005EF230 /* Model */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -694,9 +726,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A21E8711FB1D28B00C59C5F /* MNISTCNNModel.mlmodel in Sources */,
-				4A21E8741FB1D2ED00C59C5F /* DrawingView.swift in Sources */,
-				4A21E86C1FB1D13500C59C5F /* ModelController.swift in Sources */,
+				4A21E8741FB1D2ED00C59C5F /* MNISTDrawingView.swift in Sources */,
 				4A21E86E1FB1D27500C59C5F /* MNISTModelController.swift in Sources */,
+				4AF3F65E1FB28490005EF230 /* UIImage+MNISTKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +739,7 @@
 				4A21E8721FB1D28B00C59C5F /* MNISTCNNModel.mlmodel in Sources */,
 				8933C7901EB5B82D000D00A4 /* MNISTKitTests.swift in Sources */,
 				4A21E86F1FB1D27500C59C5F /* MNISTModelController.swift in Sources */,
-				4A21E8751FB1D2ED00C59C5F /* DrawingView.swift in Sources */,
+				4A21E8751FB1D2ED00C59C5F /* MNISTDrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
