@@ -1,18 +1,12 @@
 //
-//  MNISTModelController.swift
-//  mnistCalculator
+//  UIImage+MNISTKit.swift
+//  MNISTKit-iOS
 //
-//  Created by Joon on 29/10/2017.
-//  Copyright © 2017 naver. All rights reserved.
+//  Created by Joon on 08/11/2017.
+//  Copyright © 2017 MNISTKit. All rights reserved.
 //
 
 import UIKit
-import CoreML
-
-enum OneHot: Int {
-    case negative
-    case positive
-}
 
 extension UIImage {
     func resize(to size: CGSize) -> UIImage {
@@ -36,7 +30,6 @@ extension UIImage {
         let pixelData = CVPixelBufferGetBaseAddress(pxBuffer)
         let colorSpace = CGColorSpaceCreateDeviceGray()
         
-        
         let bytesPerRow = CVPixelBufferGetBytesPerRow(pxBuffer)
         let bitmapContext = CGContext(data: pixelData, width: width, height: height, bitsPerComponent: 8, bytesPerRow:bytesPerRow, space: colorSpace, bitmapInfo: CGImageAlphaInfo.none.rawValue)!
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
@@ -46,32 +39,3 @@ extension UIImage {
     }
 }
 
-public class MNISTModelController {
-    
-    let imageSizeForInfering = CGSize(width: 28, height: 28)
-    let model = MNISTCNNModel()
-    
-    public func predictNum(image: UIImage) -> Int? {
-        
-        let resizedImage = image.resize(to: imageSizeForInfering)
-        guard let pixelBuffer = resizedImage.buffer() else {
-            return nil
-        }
-        
-        guard let result = try? model.prediction(image: pixelBuffer) else {
-            return nil
-        }
-        
-        var predictedNum: Int? = nil
-
-        for i in 0..<10 {
-            let predictedValue = OneHot(rawValue: Int.init(truncating: result.output1[i]))
-            if predictedValue == .positive {
-                predictedNum = i
-            } else {
-                // nope
-            }
-        }
-        return predictedNum
-    }
-}
