@@ -23,7 +23,10 @@ public class MNISTModelController {
     
     public func predictNum(image: UIImage) -> Int? {
         
-        let resizedImage = image.resize(to: imageSizeForInfering)
+        guard let resizedImage = image.resize(to: imageSizeForInfering) else {
+            return nil
+        }
+        
         guard let pixelBuffer = resizedImage.buffer() else {
             return nil
         }

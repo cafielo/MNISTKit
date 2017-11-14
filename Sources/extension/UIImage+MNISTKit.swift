@@ -9,12 +9,12 @@
 import UIKit
 
 extension UIImage {
-    func resize(to size: CGSize) -> UIImage {
+    func resize(to size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, true, 1)
         let rect = CGRect(origin: CGPoint.zero, size: size)
         self.draw(in: rect)
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        return resizedImage!
+        return resizedImage
     }
     
     func buffer() -> CVPixelBuffer? {
@@ -26,16 +26,21 @@ extension UIImage {
         guard let pxBuffer = pixelBuffer, status == kCVReturnSuccess else {
             return nil
         }
+        
         CVPixelBufferLockBaseAddress(pxBuffer, CVPixelBufferLockFlags(rawValue:0))
         let pixelData = CVPixelBufferGetBaseAddress(pxBuffer)
         let colorSpace = CGColorSpaceCreateDeviceGray()
         
         let bytesPerRow = CVPixelBufferGetBytesPerRow(pxBuffer)
-        let bitmapContext = CGContext(data: pixelData, width: width, height: height, bitsPerComponent: 8, bytesPerRow:bytesPerRow, space: colorSpace, bitmapInfo: CGImageAlphaInfo.none.rawValue)!
-        let rect = CGRect(x: 0, y: 0, width: width, height: height)
-        bitmapContext.draw(self.cgImage!, in: rect)
         
-        return pxBuffer
+        if let bitmapContext = CGContext(data: pixelData, width: width, height: height, bitsPerComponent: 8, bytesPerRow:bytesPerRow, space: colorSpace, bitmapInfo: CGImageAlphaInfo.none.rawValue), let cgImage = self.cgImage {
+            let rect = CGRect(x: 0, y: 0, width: width, height: height)
+            bitmapContext.draw(cgImage, in: rect)
+            
+            return pxBuffer
+        } else {
+            return nil
+        }
     }
 }
 

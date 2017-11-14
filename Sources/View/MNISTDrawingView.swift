@@ -49,10 +49,13 @@ extension MNISTDrawingView {
     
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        isFingerTouched = true
         
-        let currentPoint = touches.first?.location(in: self)
-        drawLine(from: fingerPoint!, to: currentPoint!)
+        guard let currentPoint = touches.first?.location(in: self), let previousPoint = fingerPoint else {
+            return
+        }
+        
+        isFingerTouched = true
+        drawLine(from: previousPoint, to: currentPoint)
         fingerPoint = currentPoint
     }
     
