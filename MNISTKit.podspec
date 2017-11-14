@@ -1,19 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "MNISTKit"
-  s.version      = "0.1"
-  s.summary      = ""
-  s.description  = <<-DESC
-    Your description here.
-  DESC
-  s.homepage     = ""
+  s.version      = "1.0.0"
+  s.summary      = "Coolest MNISTKit Ever"
+  s.description  = "Start CoreML with MNISTKit"
+  s.homepage     = "https://github.com/cafielo/MNISTKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "joonwon lee" => "cafielo@gmail.com" }
-  s.social_media_url   = ""
+  s.author             = { "joonwon lee" => "cafielo@gmail.com" }  
   s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = "10.9"
-  s.watchos.deployment_target = "2.0"
-  s.tvos.deployment_target = "9.0"
-  s.source       = { :git => ".git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/cafielo/MNISTKit.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
   s.frameworks  = "Foundation"
 end
