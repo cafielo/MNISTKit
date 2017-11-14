@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import MNISTKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var drawingView: MNISTDrawingView!
+    @IBOutlet weak var numLabel: UILabel!
+    let mnistModelController = MNISTModelController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func predict(_ sender: UIButton) {
+        
+        guard let image = drawingView.image else {
+            return
+        }
+        
+        guard let predictedNum = mnistModelController.predictNum(image: image) else {
+            return
+        }
+        
+        numLabel.text = "\(predictedNum) is predicted"
     }
-
-
+    
+    @IBAction func clear(_ sender: UIButton) {
+        drawingView.clear()
+        numLabel.text = "???"
+    }
 }
 
