@@ -13,6 +13,9 @@ MNISTKit makes it easy to deal with MNIST model.
 ![iOS 11.0+](https://img.shields.io/badge/iOS-11.0%2B-blue.svg)
 ![Swift 4.0+](https://img.shields.io/badge/Swift-4.0%2B-orange.svg)
 
+![mnist](https://user-images.githubusercontent.com/5119286/32814584-3f3b717c-c9f3-11e7-8dd2-d5831c693473.gif)
+
+
 1. [Long way to use CoreML](#long-way-to-use-coreml)
 2. [Requirements](#requirements)
 3. [Installation](#installation)
@@ -123,8 +126,6 @@ let mnistModelController = MNISTModelController()
 ```
 
 ### Example
-
-![mnist](https://user-images.githubusercontent.com/5119286/32814584-3f3b717c-c9f3-11e7-8dd2-d5831c693473.gif)
 
 Following code is a simple example 
 ```swift 
